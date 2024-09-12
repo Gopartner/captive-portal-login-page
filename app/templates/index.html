@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wi-Fi Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="min-h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('{{ url_for('static', filename='bg.jpg') }}');">
+
+  <div class="bg-white bg-opacity-90 p-8 rounded-lg shadow-md w-full max-w-md">
+    <div class="text-center">
+	<img src="{{ url_for('static', filename='logo.png')}}" alt="Starbucks Logo" class="w-20 mx-auto mb-4">
+      <h2 class="text-xl font-semibold">Wi-Fi + Coffee</h2>
+      <p class="text-gray-600 mb-6">Log in to use our network, and this device will automatically connect at participating Starbucks® stores everywhere you go.</p>
+    </div>
+
+    <form id="loginForm">
+      <div class="mb-4">
+        <label for="firstName" class="block text-sm font-medium text-gray-700">First name</label>
+        <input type="text" id="firstName" class="mt-1 block w-full px-3 py-2 bg-gray-100 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm">
+      </div>
+
+      <div class="mb-4">
+        <label for="lastName" class="block text-sm font-medium text-gray-700">Last name</label>
+        <input type="text" id="lastName" class="mt-1 block w-full px-3 py-2 bg-gray-100 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm">
+      </div>
+
+      <div class="mb-4">
+        <label for="email" class="block text-sm font-medium text-gray-700">Email address</label>
+        <input type="email" id="email" class="mt-1 block w-full px-3 py-2 bg-gray-100 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm">
+      </div>
+
+      <div class="mb-4">
+        <label for="postalCode" class="block text-sm font-medium text-gray-700">Postal code</label>
+        <input type="text" id="postalCode" class="mt-1 block w-full px-3 py-2 bg-gray-100 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm">
+      </div>
+
+      <div class="mb-6">
+        <label class="inline-flex items-center">
+          <input type="checkbox" class="form-checkbox h-4 w-4 text-green-600">
+          <span class="ml-2 text-sm text-gray-700">I agree to receive emails about Starbucks news, promotions, and offers.</span>
+        </label>
+      </div>
+
+      <button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-2 rounded-md">Accept & Connect</button>
+    </form>
+
+    <p class="text-center text-sm text-gray-500 mt-6">
+      <a href="#" class="underline">Privacy Statement</a> • <a href="#" class="underline">Terms of Service</a>
+    </p>
+  </div>
+
+
+
+
+
+  <!-- Include file myScript.js  -->
+    <script src="{{ url_for('static', filename='myScript.js') }}"></script>  
+
+</body>
+</html>
+
